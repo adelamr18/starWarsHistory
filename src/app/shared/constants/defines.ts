@@ -1,0 +1,38 @@
+export const subTitles = {
+  director: "Director",
+  producer: "Produzenten",
+  releaseDate: "Erscheinungsdatum",
+  actorHeight: "Größe",
+  actorHairColor: "Haarfarbe",
+  actorGender: "Geschlecht",
+  planetOrbitalPeriod: "Umlaufzeit",
+  planetClimate: "Klima",
+  planetGravity: "Schwere",
+  films: "Films",
+  characters: "Charaktere",
+  planets: "Planets"
+};
+export const detailedCardSubtitles = {
+  planetClimate: "Climate",
+  filmDetails: "Film details",
+  details: "Details",
+  characters: "Charaktere",
+  planets: "Planeten",
+  spaceships: "Raumschiffe",
+  vechiles: "Fahrzeuge",
+  weight: "Gewicht",
+  actorDetails: "Character details",
+  actorBirthDate: "Geburtsjahr",
+  actorEyesColor: "Augenfarbe",
+  actorHomePlanet: "Heimatplanet",
+  planetType: "Type",
+  planetCreatedBy: "Created by",
+  planetGenre: "Genre",
+  planetPopulation: "Population",
+  planetRotationPeriod: "Rotation period",
+  planetRace: "Race",
+  planetNotable: "Notable",
+  planetFirstAppearance: "First appearance",
+  planetDetails: "Planets details",
+  episode: "Episode"
+};
