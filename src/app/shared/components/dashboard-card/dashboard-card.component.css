@@ -1,0 +1,33 @@
+.card {
+  width: 20rem;
+  margin-right: 70px;
+  margin-top: 30px;
+  padding-bottom: 22px;
+  height: 410px;
+}
+.card-img-top {
+  height: 200px;
+}
+.card-title {
+  margin-left: 15px;
+  margin-top: 25px;
+}
+.subtitle-one,
+.subtitle-two,
+.more-information {
+  margin-bottom: 3px;
+}
+.subtitle-one,
+.subtitle-two,
+.subtitle-three,
+.more-information {
+  margin-left: 15px;
+}
+.more-information {
+  position: absolute;
+  bottom: 1px;
+}
+.card-text {
+  position: relative;
+  margin-top: -5px;
+}

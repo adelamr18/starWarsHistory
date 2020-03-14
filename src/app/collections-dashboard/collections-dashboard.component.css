@@ -1,0 +1,26 @@
+.wrap-item {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-evenly;
+}
+.product-container {
+  padding: 15px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.collection_genre_container {
+  margin-top: 100px;
+}
+#collection_genre_title {
+  text-align: center;
+  font-size: 51px;
+  color: black;
+  font-weight: bolder;
+}
+#dashboard-image {
+  width: 100%;
+}

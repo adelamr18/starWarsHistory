@@ -1,1 +1,18 @@
-<p>collections-dashboard works!</p>
+<app-navbar (onGenreChange)="onGenreChange($event)"></app-navbar>
+<div *ngIf="collectionsData" class="collection_genre_container">
+  <h1 id="collection_genre_title">{{ collectionsService.genreType }}</h1>
+</div>
+<div class="container">
+  <app-dashboard-card
+    *ngFor="
+      let data of collectionsService.currenentDisplayedCards;
+      let i = index
+    "
+    [collectionsData]="data"
+    [curruentIndex]="i"
+    (onInformationRequest)="onInformationRequest($event)"
+  ></app-dashboard-card>
+</div>
+<div *ngIf="collectionsService.showDashboardImage">
+  <img id="dashboard-image" src="../../assets/starWars_logo.png" />
+</div>

@@ -1,1 +1,37 @@
-<p>dashboard-card works!</p>
+<div
+  (click)="onMoreInformationRequest()"
+  *ngIf="curruentFilmIndex < 6"
+  class="row"
+>
+  <div class="col-md-4 col-sm-6">
+    <div class="card ">
+      <div class="card-block">
+        <img
+          class="card-img-top"
+          src="../../../../assets/luke_skywalker.jpg"
+          alt="Card image cap"
+        />
+        <div class="card-title">
+          <h3>{{ data.title || data.name }}</h3>
+        </div>
+        <div class="card-text">
+          <div class="subtitle-one">
+            {{ collectionsService.subTitleOne }}:
+            {{ data.director || data.height || data.orbital_period }}
+          </div>
+          <div class="subtitle-two">
+            {{ collectionsService.subTitleTwo }}:
+            {{ data.producer || data.hair_color || data.climate }}
+          </div>
+          <div class="subtitle-three">
+            {{ collectionsService.subTitleThree }}:
+            {{ data.release_date || data.gender || data.gravity }}
+          </div>
+        </div>
+      </div>
+      <div class="more-information">
+        <h5>More information</h5>
+      </div>
+    </div>
+  </div>
+</div>
