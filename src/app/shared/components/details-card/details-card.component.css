@@ -1,0 +1,85 @@
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+.main-details-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 90px;
+}
+img {
+  width: 491px;
+  height: 262px;
+}
+
+.more-details-container {
+  margin-top: 60px;
+}
+.title {
+  font-weight: bold;
+}
+.characters-container,
+.planets-container,
+.spaceships-container,
+.vechiles-container,
+.films-container {
+  margin-bottom: 35px;
+}
+.film-description {
+  margin-top: 30px;
+  max-width: 500px;
+}
+#header-two-info,
+#card-details-header {
+  font-weight: bold;
+}
+.details-header {
+  font-weight: 600;
+}
+.further-detailed-cards-container {
+  display: flex;
+}
+.further-detailed-card-container {
+  background-color: rgb(239, 239, 239);
+  padding: 13px;
+  max-width: 190px;
+  margin-top: 10px;
+}
+#detailed-info {
+  text-align: center;
+  font-size: 10px;
+  font-weight: 600;
+  color: black;
+}
+.allign-cards {
+  margin-left: 30px;
+}
+
+@media (max-width: 1173px) {
+  img {
+    width: 350px;
+  }
+
+  #film-description-info {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 900px) {
+  .main-details-container {
+    display: flex;
+    flex-direction: column;
+  }
+  img {
+    width: 448px;
+    height: 262px;
+  }
+  #film-description-info {
+    font-size: 12px;
+  }
+  .image-container {
+    margin-top: 20px;
+  }
+}

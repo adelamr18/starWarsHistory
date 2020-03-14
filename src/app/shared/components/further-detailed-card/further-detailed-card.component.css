@@ -1,0 +1,14 @@
+.further-detailed-card-container {
+  background-color: rgb(239, 239, 239);
+  padding: 13px;
+  max-width: 190px;
+}
+#detailed-info {
+  text-align: center;
+  font-size: 10px;
+  font-weight: 600;
+  color: black;
+}
+.allign-cards {
+  margin-left: 30px;
+}

@@ -1,1 +1,8 @@
-<p>further-detailed-card works!</p>
+<div
+  [ngClass]="{ 'allign-cards': curruentIndex > 0 }"
+  *ngIf="curruentIndex < 5"
+  class="further-detailed-card-container"
+  (click)="navigateToMoreDetails()"
+>
+  <div id="detailed-info">{{ data?.name || data?.title }}</div>
+</div>

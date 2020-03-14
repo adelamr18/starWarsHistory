@@ -1,1 +1,154 @@
-<p>details-card works!</p>
+<app-navbar (onGenreChange)="onGenreChange($event)"></app-navbar>
+
+<div class="container card-details-container">
+  <div class="header-container">
+    <div class="header-one">
+      <h5>{{ collectionService.cardDetailOne }}</h5>
+    </div>
+    <div class="header-two">
+      <h1 id="header-two-info">{{ cardDetail?.title || cardDetail?.name }}</h1>
+    </div>
+    <div class="header-three" *ngIf="cardDetail?.episode_id">
+      <h5>
+        {{ collectionService.cardDetailFive }} {{ cardDetail?.episode_id }}
+      </h5>
+    </div>
+  </div>
+  <div class="main-details-container">
+    <div class="details-information  ">
+      <div class="details-heading">
+        <h4 id="card-details-header">Details</h4>
+      </div>
+      <div class="detail-one">
+        <span class="details-header"
+          >{{ collectionService.cardDetailTwo }}:
+        </span>
+        <span id="detail-one-info">{{
+          cardDetail?.director || cardDetail?.height || cardDetail?.terrain
+        }}</span>
+      </div>
+      <div class="detail-two">
+        <span class="details-header"
+          >{{ collectionService.cardDetailThree }}:
+        </span>
+        <span id="detail-two-info">{{
+          cardDetail?.producer ||
+            cardDetail?.gender ||
+            cardDetail?.rotation_period
+        }}</span>
+      </div>
+      <div class="detail-three">
+        <span class="details-header"
+          >{{ collectionService.cardDetailFour }}:
+        </span>
+        <span id="detail-three-info">{{
+          cardDetail?.release_date ||
+            cardDetail?.hair_color ||
+            cardDetail?.population
+        }}</span>
+      </div>
+      <div class="detail-four" *ngIf="cardDetail?.eye_color">
+        <span class="details-header"
+          >{{ collectionService.cardDetailFive }}:
+        </span>
+        <span id="detail-four-info">{{ cardDetail?.eye_color }}</span>
+      </div>
+      <div
+        class="detail-five"
+        *ngIf="cardDetail?.birth_year || cardDetail?.climate"
+      >
+        <span class="details-header"
+          >{{ collectionService.cardDetailSix }}:
+        </span>
+        <span id="detail-five-info">{{
+          cardDetail?.birth_year || cardDetail?.climate
+        }}</span>
+      </div>
+      <div class="detail-six" *ngIf="cardDetail?.gender">
+        <span class="details-header"
+          >{{ collectionService.cardDetailSeven }}:
+        </span>
+        <span id="detail-six-info">{{ cardDetail?.gender }}</span>
+      </div>
+      <div class="film-description">
+        <span id="film-description-info">{{ cardDetail?.opening_crawl }}</span>
+      </div>
+      <div class="home-planet" *ngIf="homePlanet?.name">
+        <span class="details-header"
+          >{{ collectionService.cardDetailEight }}:
+        </span>
+        <div class="further-detailed-card-container">
+          <div id="detailed-info">{{ homePlanet?.name }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="image-container">
+      <img src="../../../../assets/luke_skywalker.jpg" />
+    </div>
+  </div>
+  <div class="more-details-container">
+    <div class="characters-container" *ngIf="cardDetail?.characters">
+      <div class="more-details-title-one">
+        <h4 class="title">Charaktere:</h4>
+      </div>
+      <div class="further-detailed-cards-container">
+        <app-further-detailed-card
+          (onFurtherDetailsRequest)="onFurtherDetailsRequest($event)"
+          *ngFor="let data of cardDetail?.characters; let i = index"
+          [url]="data"
+          [curruentIndex]="i"
+        ></app-further-detailed-card>
+      </div>
+    </div>
+    <div class="films-container" *ngIf="cardDetail?.films">
+      <div class="more-details-title-one">
+        <h4 class="title">Films:</h4>
+      </div>
+      <div class="further-detailed-cards-container">
+        <app-further-detailed-card
+          (onFurtherDetailsRequest)="onFurtherDetailsRequest($event)"
+          *ngFor="let data of cardDetail?.films; let i = index"
+          [url]="data"
+          [curruentIndex]="i"
+        ></app-further-detailed-card>
+      </div>
+    </div>
+    <div class="planets-container">
+      <div class="more-details-title-two">
+        <h4 class="title">Planeten:</h4>
+      </div>
+      <div class="further-detailed-cards-container">
+        <app-further-detailed-card
+          *ngFor="let data of cardDetail?.planets; let i = index"
+          [url]="data"
+          [curruentIndex]="i"
+        ></app-further-detailed-card>
+      </div>
+    </div>
+    <div class="spaceships-container">
+      <div class="more-details-title-three">
+        <h4 class="title">Raumschiffe</h4>
+      </div>
+      <div class="further-detailed-cards-container">
+        <app-further-detailed-card
+          *ngFor="let data of cardDetail?.starships; let i = index"
+          [url]="data"
+          [curruentIndex]="i"
+        ></app-further-detailed-card>
+      </div>
+    </div>
+    <div class="vechiles-container">
+      <div class="more-details-title-four">
+        <h4 class="title">Fahrzeuge</h4>
+      </div>
+      <div class="further-detailed-cards-container">
+        <app-further-detailed-card
+          *ngFor="let data of cardDetail?.vehicles; let i = index"
+          [url]="data"
+          [curruentIndex]="i"
+        ></app-further-detailed-card>
+      </div>
+    </div>
+  </div>
+</div>
