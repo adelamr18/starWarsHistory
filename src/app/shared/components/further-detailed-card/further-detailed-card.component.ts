@@ -16,9 +16,11 @@ export class FurtherDetailedCardComponent implements OnInit {
   ngOnInit(): void {
     this.getFurtherDetailsData();
   }
+
   navigateToMoreDetails = () => {
     this.onFurtherDetailsRequest.emit(this.data);
   };
+
   getFurtherDetailsData = () => {
     this.http.get(this.url).subscribe(res => {
       this.data = res;

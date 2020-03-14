@@ -91,7 +91,7 @@ describe("DashboardCardComponent", () => {
     expect(component).toBeTruthy();
   });
 
-  it("should expect to emit an event having identifyCard equal to 1 and cardData equal to films data when the components collectionsData has a key called director    ", inject(
+  it("should expect to emit an event having identifyCard equal to 1 and cardData equal to films data when the components collectionsData has a key called director", inject(
     [CollectionsServiceService],
     collectionsService => {
       const fixture = TestBed.createComponent(DashboardCardComponent);

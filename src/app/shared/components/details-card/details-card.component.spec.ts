@@ -609,7 +609,7 @@ describe("DetailsCardComponent", () => {
       expect(collectionsService.cardDetailFive).toEqual("Episode");
     }
   ));
-  it("should expect to display all films data and navigate to films path when films genre is selected from the navbar and   ", inject(
+  it("should expect to display all films data and navigate to films path when films genre is selected from the navbar    ", inject(
     [CollectionsServiceService, Router],
     (collectionsService, router: Router) => {
       const event = {

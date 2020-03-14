@@ -28,7 +28,7 @@ describe("FurtherDetailedCardComponent", () => {
     expect(component).toBeTruthy();
   });
 
-  it("should expect to invoke the function getFurtherDetailsData  when component excecutes  ngOnInit lifecycle hook  ", () => {
+  it("should expect to invoke the function getFurtherDetailsData  when component excecutes  ngOnInit lifecycle hook ", () => {
     const getFurtherDetailsData = spyOn(component, "getFurtherDetailsData");
     component.ngOnInit();
     expect(getFurtherDetailsData).toHaveBeenCalled();
